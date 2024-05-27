@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal</title>
+    <link rel="stylesheet" href="EstiloMain.css" />
+</head>
+<body>
+    <!--inicio, estrenos, promociones, cines, ingresar-->
+    <header class="encabezado">
+        <a class="logo-de-cinex" href="Principal.html">
+            <img src="ruta.png" alt="Logo de Cinex" width="150">
+        </a>
+
+        <nav>
+            <ul class="barra de navegacion" id="menu principal">
+                <li><a href="Principal.html">Inicio</a></li>
+                <li><a href="Estrenos.html">Estrenos</a></li>
+                <li><a href="Cartelera.html">Cartelera</a></li>
+                <li><a href="Cines.html">Cines</a></li>
+            </ul>
+        </nav>
+
+        <ul class="navbar-nav extra-nav">
+            <!-- Enlace para iniciar sesión -->
+            <li class="registro/login" id="registrar">
+                <a href="SignUp.html" class="btnIngresar">
+                    <i class="icon-user"></i> Ingresa
+                </a>
+            </li>
+        
+            <!-- Elemento para usuarios logueados -->
+            <li class="registro/login" id="login" style="display: none;">
+                <a href="cuenta" class="btnLogin">
+                    <i class="icon-user"></i> 
+                    <span id="usernames"></span>
+                </a>
+                <a href="." title="Salir de su sesión en Cinex">
+                    <i class="salirSesion" aria-hidden="true"></i> Salir
+                </a>
+            </li>      
+        </ul>
+    </header>
+<!----------------------------------------------------------------------->
+    <main>
+        <section>
+            <h1>Cinex</h1>
+        </section>
+
+        <section class="proxEstrenos">
+            <h2 class="title">Proximos estrenos</h2>
+        </section>
+
+        <section class="EstrenosFull">
+            <div class="cuadro1">
+                <div>
+                    <h3>mayo 2024</h3>
+                </div>
+                <div class="estructura">
+                    <div class="peliculaEstreno1">
+                        <div class="poster">
+                            <img class="pelicula1" src=".webp" >
+                        </div>
+                        <div class="buttons"></div>
+                        <div class="movie-details">
+                            <h4 class="movie-title fixtitle">Título de la película</a></h4>
+                        </div>
+                        <div class="btnInfo">
+                            <a href="#pelicula"  class="info">info</a>
+                        </div>
+                        <div class="fechaPelicula">
+                            Fecha de Estreno: 30-05-2024                                         
+                        </div>
+                        <div style="display:none" id="sinopsis1">descripcion</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cuadro2">
+                <div>
+                    <h3>junio 2024</h3>
+                </div>
+                <div class="estructura">
+                    <div class="peliculaEstreno2">
+                        <div class="poster">
+                            <img class="pelicula2" src=".webp" >
+                        </div>
+                        <div class="buttons"></div>
+                        <div class="movie-details">
+                            <h4 class="movie-title fixtitle">Título de la película</a></h4>
+                        </div>
+                        <div class="btnInfo">
+                            <a href="#pelicula"  class="info">info</a>
+                        </div>
+                        <div class="fechaPelicula">
+                            Fecha de Estreno: 30-05-2024                                         
+                        </div>
+                        <div style="display:none" id="sinopsis1">descripcion</div>
+                    </div>
+                </div>
+            </div>
+            <!-- Más películas -->
+        </section>
+    </main>
+<!----------------------------------------------------------------------->
+    <footer class="footer">
+        <a class="logo-de-cinex">
+            <img src="ruta.png" alt="Logo de Cinex" width="150">
+        </a>
+        <ul class="social-icon">
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#">
+                    <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#">
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+            </li>
+            <li class="social-icon__item">
+                <a class="social-icon__link" href="#">
+                    <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+            </li>
+        </ul>
+
+        <div class="paginasFooter">
+            <ul class="listaPaginas">
+                <li><a href="Cartelera.html">Cartelera</a></li>
+                <li><a href="Cines.html">Cines</a></li>
+                <li><a href="Estrenos.html">Próximos estrenos</a></li>
+            </ul>
+        </div>
+        <div class="infoFooter">
+            <div class="widget widget-links">
+                <h4 class="widget-title">Nosotros</h4>
+                <p class="info">informacion empresa</p>
+            </div>
+        </div>
+    
+        <p>&copy;compania | All Rights Reserved</p>
+    </footer>
+
+    <!--<h1>Cine </h1>
+    <img scr=".png"> </img>
+    <a href="">Link</a> -->
+    <!-- <script src="FuncionMain.js"></script> -->
+</body>
+</html>
