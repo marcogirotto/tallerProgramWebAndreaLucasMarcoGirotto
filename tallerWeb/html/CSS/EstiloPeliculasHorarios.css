@@ -1,0 +1,350 @@
+.peliculaTitulo {
+    position: relative;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.peliculaImagen {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.rellenoDecorativo {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    padding:100px 0;
+    text-align: left;
+    margin: 0;
+}
+
+.rellenoDecorativo h1{
+    padding-left: 40px;
+    font-size: 36px;
+    font-family: 'Arial', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+/* boton que muestra descrip o horarios */
+
+.peliculaSelectorInfoPuestos {
+    display: flex;
+    justify-content:center;
+    margin: 20px 200px;
+    border-bottom: 1px solid gray;
+}
+
+.selectorBoton {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    padding: 10px 0px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50%;
+}
+
+.selectorBoton:hover,
+.selectorBoton:focus {
+    background-color: #f0f0f0; /*todo esto puede cambiar*/
+    color: orchid;
+}
+
+.selectorBoton#detalles {
+    border-bottom: 2px solid red; 
+    color: red;
+}
+
+/* sinopsi seccion */
+
+.peliculaDatos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 50px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /*display: flex;
+    flex-direction: column; 
+    align-items: flex-start; */
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+.peliculaSepararEnColumnas{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.datosSinopsis {
+    padding-left: 80px;
+}
+
+.datosClasificacion{
+    padding-right: 80px;
+}
+
+.datosClasificacion ul {
+    list-style: none;
+    padding: 0;
+}
+
+.datosClasificacion li {
+    margin-right: 20px; /* Espacio entre los elementos de la lista */
+}
+
+/* Imágenes del elenco */
+
+.datosElenco {
+    margin: 0;
+    text-align: center; 
+}
+
+.datosElenco h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.datosElenco dt,
+.datosElenco dd {
+    display: inline-block; 
+    margin: 10px;
+}
+
+.datosElenco img {
+    width: 110px;
+    height: 100px; 
+    border-radius: 50%; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 8px; 
+}
+
+.datosElenco figcaption p {
+    font-size: 16px;
+    color: #666; 
+}
+
+.datosElenco figcaption h4 {
+    font-size: 24px;
+    color: black; 
+    font-weight: bold;
+    margin: 5px;
+}
+
+/* slider del horarios */
+
+.ticketFunciones {
+    display: inline-flex;
+    flex-wrap: wrap; 
+    overflow: hidden; 
+    margin: 40px;
+    position: relative;
+}
+
+.ticketHorario {
+    background-color: #f0f0f0; 
+    color: #333; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    margin: 10px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+    transition: background-color 0.3s; 
+}
+
+
+.diaSemana {
+    font-size: 0.8em; 
+    text-transform: uppercase;
+    margin-bottom: 5px; 
+}
+
+.diaFecha {
+    font-size: 2em; 
+    font-weight: bold; 
+    line-height: 1; 
+}
+
+.mes {
+    font-size: 0.8em; 
+    text-transform: uppercase; 
+}
+
+/*botones del slider*/
+.slider-control {
+    display: inline-block;
+    width: 30px; 
+    height: 30px; 
+    line-height: 30px; 
+    text-align: center; 
+    background-color: #ddd; 
+    color: #333; 
+    border-radius: 50%; 
+    position:absolute;
+    top: 50%; 
+    transform: translateY(-50%); 
+    z-index: 1;
+    cursor: pointer;
+}
+
+.slider-control.prev {
+    left: 0;
+}
+
+.slider-control.next {
+    right: 0;
+}
+
+.slider-control:hover {
+    background-color: #555; 
+    color: #fff;
+}
+
+/* Efecto al pasar el mouse sobre los botones */
+.ticketHorario:hover {
+    background-color: #e0e0e0; /* Color de fondo al pasar el mouse */
+}
+
+
+/* seccion de horarios--------------------------------- */
+
+.peliculaTicket {
+    margin: 40px;
+    display: none;
+}
+
+.cinesContenedor{
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background: linear-gradient(145deg, #f5f5f5, #eaeaea); /* Gradiente de fondo */
+    padding: 20px; /* Relleno interno */
+    margin-bottom: 40px;
+}
+
+.contenedorDeColumnas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Espaciado entre elementos */
+}
+
+.contenedorColumnaDescripcion img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+    border-radius: 5px; 
+}
+
+.contenedorColumnaDescripcion p {
+    font-size: 1rem;
+    color: #666;
+    font-weight: bold; /* Texto en negrita */
+    line-height: 1.5; /* Espaciado de línea para mejor legibilidad */
+}
+
+
+/*la parte de salas*/
+
+.contenedorColumnaSalas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.salasItem {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    background-color: #f5f5f5;
+    border: none;
+    padding: 1rem;
+    margin:10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    height: 200px;
+}
+
+.itemContenido {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%;
+    height: 100%; 
+}
+
+.contenidoCategorias {
+    display: flex;
+    justify-content: center;
+}
+
+.categoriaIcono {
+    max-width: 120px; 
+}
+
+.salasItem:hover {
+    background-color: #ddd; /* Color al pasar el cursor */
+    transform: translateY(-2px); /* Efecto de elevación al pasar el cursor */
+}
+
+
+/* boton que muestra peliculas por c/a cine--------------- */
+
+.fullTitulo {
+    background-color: transparent;
+    color: black;
+    border: none;
+    padding-left: 20px;
+    padding-right: 10px;
+    border-radius: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    height: 60px;
+    position: relative;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    letter-spacing: 1px; 
+    margin-bottom: 20px;
+}
+
+.fullTitulo::after {
+    content: ''; 
+    position: absolute; 
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-bottom: 1px solid black; 
+    width: 100%; 
+}
+
+.fullTitulo svg {
+    height: 60px;
+    margin-left: 10px;
+}
+
+
+.fullTitulo svg {
+    height: 60px;
+    margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fullTitulo:hover svg {
+    transform: rotate(90deg);
+}

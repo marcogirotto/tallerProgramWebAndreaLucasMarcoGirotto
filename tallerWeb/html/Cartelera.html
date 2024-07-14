@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/EstiloCartelera.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/EstiloEncabezadoFooter.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Principal</title>
-    <link rel="stylesheet" href="EstiloMain.css" />
 </head>
 <body>
     <!--inicio, estrenos, promociones, cines, ingresar-->
     <header class="encabezado">
-        <a class="logo-de-cinex" href="Principal.html">
-            <img src="ruta.png" alt="Logo de Cinex" width="150">
+        <a class="logoCinex" href="Principal.html">
+            <img src="imagenes/Cinex_logo.png" alt="Logo de Cinex">
         </a>
 
         <nav>
-            <ul class="barra de navegacion" id="menu principal">
+            <ul class="barraNavegacion" id="menu principal">
                 <li><a href="Principal.html">Inicio</a></li>
                 <li><a href="Estrenos.html">Estrenos</a></li>
                 <li><a href="Cartelera.html">Cartelera</a></li>
@@ -22,128 +23,250 @@
             </ul>
         </nav>
 
-        <ul class="navbar-nav extra-nav">
-            <!-- Enlace para iniciar sesión -->
-            <li class="registro/login" id="registrar">
-                <a href="SignUp.html" class="btnIngresar">
-                    <i class="icon-user"></i> Ingresa
-                </a>
-            </li>
         
-            <!-- Elemento para usuarios logueados -->
-            <li class="registro/login" id="login" style="display: none;">
-                <a href="cuenta" class="btnLogin">
-                    <i class="icon-user"></i> 
-                    <span id="usernames"></span>
-                </a>
-                <a href="." title="Salir de su sesión en Cinex">
-                    <i class="salirSesion" aria-hidden="true"></i> Salir
-                </a>
-            </li>      
-        </ul>
+        <a href="SignUp.html" class="login-btn">
+            <span class="login-icon">👤</span> 
+            Iniciar Sesión / Registrarse
+        </a>
+        
     </header>
 <!----------------------------------------------------------------------->
     <main>
-        <section>
-            <h1>Cinex</h1>
+        <section class="principalCartelera">
+            <div class="carteleraTitulo">
+                <h2>cartelera</h2>
+            </div>
+    
+            <div class="carteleraFull">
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+                <div class="carteleraContenido">
+                    <img class="carteleraImagen" src="https://amc-theatres-res.cloudinary.com/image/upload/f_auto,fl_lossy,h_465,q_auto,w_310/v1717521746/amc-cdn/production/2/movies/67500/67476/PosterDynamic/165402.jpg" alt="imagenPelicula">
+                    <button class="carteleraBtn">
+                        <i class="iconoPlay" tabindex="0" aria-label="link a pagina de pelicula" style="background-image: none;">
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                id="icon_play" viewBox="0 0 45 45" preserveAspectRatio="xMidYMid meet" fill="#ffffff" width="100%"
+                                height="100%">
+                                <path
+                                    d="M22.5 0A22.5 22.5 0 1 0 45 22.5 22.5 22.5 0 0 0 22.5 0zm0 43.172A20.672 20.672 0 1 1 43.172 22.5 20.672 20.672 0 0 1 22.5 43.172z">
+                                </path>
+                                <path
+                                    d="M19.181 13.331a.9.9 0 0 0-1.462.732v16.874a.9.9 0 0 0 1.462.732l11.616-8.438a.9.9 0 0 0 0-1.49zm.506 15.806V15.864l9 6.637z">
+                                </path>
+                            </svg>
+                        </i>
+                    </button>
+                    <div class="carteleraTituloPeli">
+                        <h3>peli</h3>
+                    </div>
+                </div>
+            </div>
+                <!-- Más películas -->
         </section>
-
-        <div class="tituloCartelera">
-            <h2 class="title">cartelera</h2>
-        </div>
-
-        <div class="CarteleraFull">
-            <div class="carteleraPelicula1">
-                <a href="Pelicula.html" class="movie-link">
-                    <img src="pelicula-poster.jpg" alt="pelicula">
-                </a>
-                <div class="movie-details">
-                    <h4 class="movie-title fixtitle">
-                        <a href="Pelicula.html">Título de la película</a>
-                    </h4>
-                </div>
-            </div>
-            <div class="carteleraPelicula2">
-                <a href="Pelicula.html" class="movie-link">
-                    <img src="pelicula-poster.jpg" alt="pelicula">
-                </a>
-                <div class="movie-details">
-                    <h4 class="movie-title fixtitle">
-                        <a href="Pelicula.html">Título de la película</a>
-                    </h4>
-                </div>
-            </div>
-            <div class="carteleraPelicula3">
-                <a href="Pelicula.html" class="movie-link">
-                    <img src="pelicula-poster.jpg" alt="pelicula">
-                </a>
-                <div class="movie-details">
-                    <h4 class="movie-title fixtitle">
-                        <a href="Pelicula.html">Título de la película</a>
-                    </h4>
-                </div>
-            </div>
-            <div class="carteleraPelicula4">
-                <a href="Pelicula.html" class="movie-link">
-                    <img src="pelicula-poster.jpg" alt="pelicula">
-                </a>
-                <div class="movie-details">
-                    <h4 class="movie-title fixtitle">
-                        <a href="Pelicula.html">Título de la película</a>
-                    </h4>
-                </div>
-            </div>
-            <!-- Más películas -->
+        
         </div>
     </main>
 <!----------------------------------------------------------------------->
-    <footer class="footer">
-        <a class="logo-de-cinex">
-            <img src="ruta.png" alt="Logo de Cinex" width="150">
-        </a>
-        <ul class="social-icon">
-            <li class="social-icon__item">
-                <a class="social-icon__link" href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
+<footer class="footer">
+    <div class="footerPrincipal">
+
+        <ul class="footerRedes">
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
                 </a>
             </li>
-            <li class="social-icon__item">
-                <a class="social-icon__link" href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
                 </a>
             </li>
-            <li class="social-icon__item">
-                <a class="social-icon__link" href="#">
-                    <ion-icon name="logo-linkedin"></ion-icon>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
                 </a>
             </li>
-            <li class="social-icon__item">
-                <a class="social-icon__link" href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
                 </a>
             </li>
         </ul>
+    </div>
 
-        <div class="paginasFooter">
-            <ul class="listaPaginas">
-                <li><a href="Cartelera.html">Cartelera</a></li>
-                <li><a href="Cines.html">Cines</a></li>
-                <li><a href="Estrenos.html">Próximos estrenos</a></li>
-            </ul>
-        </div>
-        <div class="infoFooter">
-            <div class="widget widget-links">
-                <h4 class="widget-title">Nosotros</h4>
-                <p class="info">informacion empresa</p>
-            </div>
-        </div>
+    <ul class="footerEnlaces">
+        <li><a href="Cartelera.html">Nosotros</a></li>
+        <li><a href="Cines.html">Empresa</a></li>
+        <li><a href="Estrenos.html">Contactos</a></li>
+    </ul>
     
-        <p>&copy;compania | All Rights Reserved</p>
-    </footer>
-
-    <!--<h1>Cine </h1>
-    <img scr=".png"> </img>
-    <a href="">Link</a> -->
-    <!-- <script src="FuncionMain.js"></script> -->
+    <div class="footerAbout">
+        
+        <div class="aboutInfo">
+            <a class="footerLogo">
+                <img src="imagenes/Cinex_logo.png" alt="LogoDeCinex" width="150">
+            </a>
+            <p>&copy;compania | All Rights Reserved</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>

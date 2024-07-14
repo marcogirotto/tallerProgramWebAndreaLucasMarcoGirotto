@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
-    <link rel="stylesheet" href="EstiloMain.css" />
-</head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="CSS/EstiloPeliculasHorarios.css" />
+        <link rel="stylesheet" type="text/css" href="CSS/EstiloEncabezadoFooter.css" />
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Cine</title>
+    </head>
 <body>
     <!--inicio, estrenos, promociones, cines, ingresar-->
     <header class="encabezado">
-        <a class="logo-de-cinex" href="Principal.html">
-            <img src="ruta.png" alt="Logo de Cinex" width="150">
+        <a class="logoCinex" href="Principal.html">
+            <img src="imagenes/Cinex_logo.png" alt="Logo de Cinex">
         </a>
 
         <nav>
-            <ul class="barra de navegacion" id="menu principal">
+            <ul class="barraNavegacion" id="menu principal">
                 <li><a href="Principal.html">Inicio</a></li>
                 <li><a href="Estrenos.html">Estrenos</a></li>
                 <li><a href="Cartelera.html">Cartelera</a></li>
@@ -22,190 +24,88 @@
             </ul>
         </nav>
 
-        <ul class="navbar-nav extra-nav">
-            <!-- Enlace para iniciar sesión -->
-            <li class="registro/login" id="registrar">
-                <a href="SignUp.html" class="btnIngresar">
-                    <i class="icon-user"></i> Ingresa
-                </a>
-            </li>
         
-            <!-- Elemento para usuarios logueados -->
-            <li class="registro/login" id="login" style="display: none;">
-                <a href="cuenta" class="btnLogin">
-                    <i class="icon-user"></i> 
-                    <span id="usernames"></span>
-                </a>
-                <a href="." title="Salir de su sesión en Cinex">
-                    <i class="salirSesion" aria-hidden="true"></i> Salir
-                </a>
-            </li>      
-        </ul>
+        <a href="SignUp.html" class="login-btn">
+            <span class="login-icon">👤</span> 
+            Iniciar Sesión / Registrarse
+        </a>
+        
     </header>
 <!----------------------------------------------------------------------->
     <main>
-        <section>
-            <h1>Cinex</h1>
-        </section>
-
-        <div class="cine">
-            <h2 class="tituloCine">cine</h2>
-        </div>
-
-        <div class="row">
-            <div class="estructura">
-                <div class="estructuraCampo">
-                    <div class="estructuraContenedor">
-                        <div class="cineImagen">
-                            <img src=".webp">
-                        </div>
-                        <div class="cineContenido">
-                            <div class="contenido">
-                                <h3 class="title">tolon</h3>
-                                <p>Calle Copernico con Nueva York, Las Mercedes, Centro Comercial Tolon, Pisos 5, 6. Caracas</p>
-                                <br>
-                                <p>
-                                    <a href="#apiGoogle" class="btnMapa">
-                                        Ver Ubicación
-                                    </a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <div class="contenedorDeColumnas">
+            <div class="contenedorColumnaDescripcion" id="DescripcionCine">
             </div>
         </div>
+    <!--------------------------------------------------------->
+        <section class="peliculaTicket">
+            <div class="ticketFunciones">
+                <button class="ticketHorario">
+                    <p class="diaSemana">lunes</p>
+                    <p class="diaFecha">1</p>
+                    <p class="mes">agosto</p>
+                </button>
+                <button class="ticketHorario">
+                    <p class="diaSemana">lunes</p>
+                    <p class="diaFecha">1</p>
+                    <p class="mes">agosto</p>
+                </button>
+                <button class="ticketHorario">
+                    <p class="diaSemana">lunes</p>
+                    <p class="diaFecha">1</p>
+                    <p class="mes">agosto</p>
+                </button>
 
-        <section class="funciones">
-            <h3 class="funcionesTitulo">funciones</h3>
-        </section>
-
-        <div class="slider">
-            <div class="navegacion"></div>
-                <ul>
-                    <li><div class="Item1">Lunes</div></li>
-                    <li><div class="Item2">Martes</div></li>
-                    <li><div class="Item3">Martes</div></li>
-                    <li><div class="Item4">Martes</div></li>
-                    <li><div class="Item1">Martes</div></li>
-                </ul>
+                <label class="slider-control prev">&#8249;</label>
+                <label class="slider-control next">&#8250;</label>
             </div>
-            <div class="btnNext"><button>></button></div>
-            <div class="btnPrev"><button><</button></div>
-        </div>
 
-        <div class="peliContenedor">
-            <div class="peliContenido">
-                <div class="contenido">
-                    <img data=".png" class="imagen" src=".webp">
-                    <div style="height:20px"></div>
-                </div>
-                <div class="peliCol">
-                    <div class="row">
-                        <div class="peliTitulo">
-                            <h5 class="title">pelicula</h5>
-                        </div>
-                        <div class="peliInfo1">
-                            Genero: <b>Documental</b><br>
-                        </div>
-                        <div class="peliInfo2">
-                            Duración: <b>80 minuto(s)</b><br>
-                        </div>
-                        <div class="peliInfo3">
-                            Censura: <b>B</b><br>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="boton">
-                            <div>
-                                <div id="sesion" title="funcionProyectada" class="cinemasessionpos">
-                                    <button type="button" class="btnFuncion"><img src=".webp" class="iconoIdioma"><br>Sala 7<br>01:30 pm<br><div id="loader38963" name="loader38963"><img src=".gif"></div></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="peliContenedor">
-            <div class="peliContenido">
-                <div class="contenido">
-                    <img data=".png" class="imagen" src=".webp">
-                    <div style="height:20px"></div>
-                </div>
-                <div class="peliCol">
-                    <div class="row">
-                        <div class="peliTitulo">
-                            <h5 class="title">pelicula</h5>
-                        </div>
-                        <div class="peliInfo1">
-                            Genero: <b>Documental</b><br>
-                        </div>
-                        <div class="peliInfo2">
-                            Duración: <b>80 minuto(s)</b><br>
-                        </div>
-                        <div class="peliInfo3">
-                            Censura: <b>B</b><br>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="boton">
-                            <div>
-                                <div id="sesion" title="funcionProyectada" class="cinemasessionpos">
-                                    <button type="button" class="btnFuncion"><img src=".webp" class="iconoIdioma"><br>Sala 7<br>01:30 pm<br><div id="loader38963" name="loader38963"><img src=".gif"></div></button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+            <div class="ticketCines">
+                <div class="cinesContenedor" id="InfoSalas">
+                </div> 
+            </div>   
     </main>
 <!----------------------------------------------------------------------->
     <footer class="footer">
-        <a class="logo-de-cinex">
-            <img src="ruta.png" alt="Logo de Cinex" width="150">
-        </a>
-        <ul class="social-icon">
-            <li class="social-icon__item">
-                <a class="social-icon__link" href="#">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-            </li>
-            <li class="social-icon__item">
-                <a class="social-icon__link" href="#">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-            </li>
-            <li class="social-icon__item">
-                <a class="social-icon__link" href="#">
-                    <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-            </li>
-            <li class="social-icon__item">
-                <a class="social-icon__link" href="#">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-            </li>
-        </ul>
+        <div class="footerPrincipal">
 
-        <div class="paginasFooter">
-            <ul class="listaPaginas">
-                <li><a href="Cartelera.html">Cartelera</a></li>
-                <li><a href="Cines.html">Cines</a></li>
-                <li><a href="Estrenos.html">Próximos estrenos</a></li>
+            <ul class="footerRedes">
+                <li class="iconoRedSocial">
+                    <a class="imagenRedSocial" href="#">
+                        <img src="imagenes/facebook.png">
+                    </a>
+                </li>
+                <li class="iconoRedSocial">
+                    <a class="imagenRedSocial" href="#">
+                        <img src="imagenes/facebook.png">
+                    </a>
+                </li>
+                <li class="iconoRedSocial">
+                    <a class="imagenRedSocial" href="#">
+                        <img src="imagenes/facebook.png">
+                    </a>
+                </li>
+                <li class="iconoRedSocial">
+                    <a class="imagenRedSocial" href="#">
+                        <img src="imagenes/facebook.png">
+                    </a>
+                </li>
             </ul>
-        </div>
-        <div class="infoFooter">
-            <div class="widget widget-links">
-                <h4 class="widget-title">Nosotros</h4>
-                <p class="info">informacion empresa</p>
+            </div>
+                <ul class="footerEnlaces">
+                    <li><a href="Cartelera.html">Nosotros</a></li>
+                    <li><a href="Cines.html">Empresa</a></li>
+                    <li><a href="Estrenos.html">Contactos</a></li>
+                </ul>
+            <div class="footerAbout">
+
+            <div class="aboutInfo">
+                <a class="footerLogo">
+                    <img src="imagenes/Cinex_logo.png" alt="LogoDeCinex" width="150">
+                </a>
+                <p>&copy;compania | All Rights Reserved</p>
             </div>
         </div>
-    
-        <p>&copy;compania | All Rights Reserved</p>
     </footer>
 
     <!--<h1>Cine </h1>
@@ -213,4 +113,55 @@
     <a href="">Link</a> -->
     <!-- <script src="FuncionMain.js"></script> -->
 </body>
+
+
+<script type="text/javascript"> 
+    function getCineInfo(){
+        let params=new URL (document.location.toString()).searchParams;
+        let cineid=params.get("cineid");
+        
+        console.log("El cine seleccionado es "+ cineid);
+        let url= "https://cinexunidos-production.up.railway.app/theatres/"+cineid;
+
+        console.log("El URL del API a llamar es"+ url);
+
+        $.get(url, function(respuesta){
+            console.log(respuesta);
+            let descripcionCine='<h4>'+respuesta.name+'<h4>'+
+                '<img src="'+respuesta.images[0]+ '" alt="cine Tolon">'+
+                '<p>'+respuesta.location+'</p>';
+            $('#DescripcionCine').append(descripcionCine);
+
+            respuesta.auditoriums.forEach(element => {
+                console.log(element);
+                let infoSalas= '<button class="fullTitulo" id="fullTitulo">'+
+                    '<h4>'+element.name+'</h4>'+
+                    '</button>'+
+                    '<div class="contenedorColumnaSalas">';
+                element.showtimes.forEach(showtime =>{
+                    infoSalas += '<button class="salasItem">'+
+                        '<div class="itemContenido">'+
+                            '<div class="contenidoCategorias">'+
+                                '<img class="categoriaIcono" src="https://cinexunidos-production.up.railway.app/' +showtime.movie.poster+'">'+
+                            '</div>'+
+                            '<h5 class="hora">'+showtime.startTime+'</h5>'+
+                            '<p class="sala">'+showtime.movie.name+'</p>'+
+                            '<p class="sala">'+showtime.movie.runningTime+'</p>'+
+                            '<p class="sala">'+showtime.movie.rating+'</p>'+
+                        '</div>'+
+                    '</button>';
+                })
+                infoSalas+='</div>';
+                $('#InfoSalas').append(infoSalas);
+            });
+        });
+    }
+    window.onload=getCineInfo;
+
+    
+
+    </script>
+
+
+
 </html>

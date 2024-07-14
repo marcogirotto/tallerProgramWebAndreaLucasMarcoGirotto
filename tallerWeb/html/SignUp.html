@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="CSS/EstiloSignUp.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/EstiloEncabezadoFooter.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Principal</title>
-    <link rel="stylesheet" href="EstiloMain.css" />
 </head>
+
 <body>
     <!--inicio, estrenos, promociones, cines, ingresar-->
     <header class="encabezado">
-        <a class="logo-de-cinex" href="Principal.html">
-            <img src="ruta.png" alt="Logo de Cinex" width="150">
+        <a class="logoCinex" href="Principal.html">
+            <img src="imagenes/Cinex_logo.png" alt="Logo de Cinex">
         </a>
 
         <nav>
-            <ul class="barra de navegacion" id="menu principal">
+            <ul class="barraNavegacion" id="menu principal">
                 <li><a href="Principal.html">Inicio</a></li>
                 <li><a href="Estrenos.html">Estrenos</a></li>
                 <li><a href="Cartelera.html">Cartelera</a></li>
                 <li><a href="Cines.html">Cines</a></li>
             </ul>
         </nav>
-
-        <ul class="navbar-nav extra-nav">
-            <!-- Enlace para iniciar sesión -->
-            <li class="registro/login" id="registrar">
+        
+       <!-- <ul class="navbar-nav extra-nav">
+             Enlace para iniciar sesión -->
+            <!--<li class="registro/login" id="registrar">
                 <a href="SignUp.html" class="btnIngresar">
                     <i class="icon-user"></i> Ingresa
                 </a>
             </li>
+
+            
         
-            <!-- Elemento para usuarios logueados -->
+             Elemento para usuarios logueados 
             <li class="registro/login" id="login" style="display: none;">
                 <a href="cuenta" class="btnLogin">
                     <i class="icon-user"></i> 
@@ -40,97 +44,110 @@
                     <i class="salirSesion" aria-hidden="true"></i> Salir
                 </a>
             </li>      
-        </ul>
+        </ul>-->
+
+        <a href="SignUp.html" class="login-btn">
+            <span class="login-icon">👤</span>
+            Iniciar Sesión
+        </a>
     </header>
+
+    
 <!----------------------------------------------------------------------->
-<main>
-    <section class="nombre-cine">
-        <h1>Cinex</h1>
-    </section>
-    <section class="registro-usuario">
+<main>   
+    <section class="principalPaginas">
+         <!--<section class="registro-usuario">
+                <h2>Registrarse</h2>
+                <p>Introduce los datos a continuacion</p>
+                <form action="registro.php" method="post">-->
+                    
         <h2>Registrarse</h2>
-        <p>Introduce los datos a continuacion</p>
+        <p>Introduce los datos a continuación</p></br>
         <form action="registro.php" method="post">
-            <div class="form-group">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
-            </div>
 
-            <div class="form-group">
-                <label for="apellido">Apellido:</label>
-                <input type="text" id="apellido" name="apellido" required>
-            </div>
-
-            <div class="form-group">
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-group">
-                <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-
-            <div class="form-group">
-                <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono">
-            </div>
-
-            <div class="form-actions">
-                <button type="submit">Registrarse</button>
-                <button type="reset">Cancelar</button>
-            </div>
+          <div class="grupoForm1">
+            <label class="labelLogin" for="nombre">Nombre:</label>
+            <input class="inputLogin" type="text" id="nombre" name="nombre" required>
+          </div>
+    
+          <div class="grupoForm2">
+            <label class="labelLogin" for="apellido">Apellido:</label>
+            <input class="inputLogin" type="text" id="apellido" name="apellido" required>
+          </div>
+    
+          <div class="grupoForm3">
+            <label class="labelLogin" for="email">Correo electrónico:</label>
+            <input class="inputLogin" type="email" id="email" name="email" required>
+          </div>
+    
+          <div class="grupoForm3">
+            <label class="labelLogin" for="password">Contraseña:</label>
+            <input class="inputLogin" type="password" id="password" name="password" required>
+          </div>
+    
+          <div class="grupoForm3">
+            <label class="labelLogin" for="telefono">Teléfono:</label>
+            <input class="inputLogin" type="tel" id="telefono" name="telefono">
+          </div>
+    
+          <div class="grupoForm3">
+            <button type="submit">Registrarse</button>
+            <button type="reset">Cancelar</button>
+          </div>
         </form>
-    </section>
+      </section>
+
 </main>
 <!----------------------------------------------------------------------->
 <footer class="footer">
-    <a class="logo-de-cinex">
-        <img src="ruta.png" alt="Logo de Cinex" width="150">
-    </a>
-    <ul class="social-icon">
-        <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a>
+    <div class="footerPrincipal">
+
+        <ul class="footerRedes">
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
+                </a>
+            </li>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
+                </a>
+            </li>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
+                </a>
+            </li>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <ul class="footerEnlaces">
+        <li>
+            <a href="Cartelera.html">Nosotros</a>
         </li>
-        <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a>
+        <li>
+            <a href="Cines.html">Empresa</a>
         </li>
-        <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a>
+        <li>
+            <a href="Estrenos.html">Contactos</a>
         </li>
     </ul>
 
-    <div class="paginasFooter">
-        <ul class="listaPaginas">
-            <li><a href="Cartelera.html">Cartelera</a></li>
-            <li><a href="Cines.html">Cines</a></li>
-            <li><a href="Estrenos.html">Próximos estrenos</a></li>
-        </ul>
-    </div>
-    <div class="infoFooter">
-        <div class="widget widget-links">
-            <h4 class="widget-title">Nosotros</h4>
-            <p class="info">informacion empresa</p>
+    <div class="footerAbout">
+
+        <div class="aboutInfo">
+            <a class="footerLogo">
+                <img src="imagenes/Cinex_logo.png" alt="LogoDeCinex" width="150">
+            </a>
+            <p>&copy;compania | All Rights Reserved</p>
         </div>
     </div>
-
-    <p>&copy;compania | All Rights Reserved</p>
 </footer>
 
-<!--<h1>Cine </h1>
-<img scr=".png"> </img>
-<a href="">Link</a> -->
-<!-- <script src="FuncionMain.js"></script> -->
 </body>
 </html>

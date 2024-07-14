@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
-    <link rel="stylesheet" href="EstiloMain.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/EstiloPeliculasHorarios.css" />
+    <link rel="stylesheet" type="text/css" href="CSS/EstiloEncabezadoFooter.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pelicula Horarios</title>
 </head>
 <body>
     <!--inicio, estrenos, promociones, cines, ingresar-->
     <header class="encabezado">
-        <a class="logo-de-cinex" href="Principal.html">
-            <img src="ruta.png" alt="Logo de Cinex" width="150">
+        <a class="logoCinex" href="Principal.html">
+            <img src="imagenes/Cinex_logo.png" alt="Logo de Cinex">
         </a>
 
         <nav>
-            <ul class="barra de navegacion" id="menu principal">
+            <ul class="barraNavegacion" id="menu principal">
                 <li><a href="Principal.html">Inicio</a></li>
                 <li><a href="Estrenos.html">Estrenos</a></li>
                 <li><a href="Cartelera.html">Cartelera</a></li>
@@ -22,117 +23,269 @@
             </ul>
         </nav>
 
-        <ul class="navbar-nav extra-nav">
-            <!-- Enlace para iniciar sesión -->
-            <li class="registro/login" id="registrar">
-                <a href="SignUp.html" class="btnIngresar">
-                    <i class="icon-user"></i> Ingresa
-                </a>
-            </li>
         
-            <!-- Elemento para usuarios logueados -->
-            <li class="registro/login" id="login" style="display: none;">
-                <a href="cuenta" class="btnLogin">
-                    <i class="icon-user"></i> 
-                    <span id="usernames"></span>
-                </a>
-                <a href="." title="Salir de su sesión en Cinex">
-                    <i class="salirSesion" aria-hidden="true"></i> Salir
-                </a>
-            </li>      
-        </ul>
+        <a href="SignUp.html" class="login-btn">
+            <span class="login-icon">👤</span> 
+            Iniciar Sesión / Registrarse
+        </a>
+        
     </header>
 <!----------------------------------------------------------------------->
-
     <main>
-            <section class="datos-generales">
-                <figure>
-                    <img src="IMAGEN.JPG" alt="Portada de la película">
-                </figure>
-                <h2>Sinopsis</h2>
-                <p>Descripción detallada de la pelicula</p>
-                </br>
-            </section>
+        <section class="peliculaTitulo">
+            <img class="peliculaImagen" src="https://cms-assets.webediamovies.pro/cdn-cgi/image/dpr=1,fit=scale-down,gravity=auto,metadata=none,quality=85,width=2000/production/241/b3f2b18c15ffb4f141116cd089c407eb.jpg" alt="Portada de la película">
+            <div class="rellenoDecorativo">
+                <h1>Titulo</h1>
+            </div>
+        </section>
 
-            <section class="funciones">
-                <h3> Tipo de Pelicula - Idioma - Duracion</h3>
-                <table>
-                    <tr>
-                        <th>Cine</th>
-                        <th>Hora</th>
-                        <th>Sala</th>
-                        <th>Censura</th>
-                    </tr>
-                    <tr>
-                        <td>Cine 1</td>
-                        <td>02:00</td>
-                        <td>Sala 1</td>
-                        <td>A</td>
-                    </tr>
-                </table>
-                </br>
-            </section>
+        <div class="peliculaSelectorInfoPuestos">
+            <button type="button" class="selectorBoton" id="detalles">Detalles de la película</button>
+            <button type="button" class="selectorBoton" id="horarios">Horarios</button>
+        </div>
 
-            <section class="informacion-cine">
-                </br>
-                <hr>
-                <h4>Cine</h4>
-                <a href="#instagram"><img src="instagram-icon.png" alt="Instagram"></a>
-                <a href="#youtube"><img src="youtube-icon.png" alt="Youtube"></a>
-                <a href="#gmail"><img src="gmail-icon.png" alt="Gmail"></a>
-                <a href="#x"><img src="x-icon.png" alt="X"></a>
-                <p>Información detallada del cine...</p>
-                <hr>
-            </section>   
+        <section class="peliculaDatos">
+            <div class="peliculaSepararEnColumnas">
+                <div class="datosSinopsis">
+                    <h3>Sinopsis</h3> 
+                    <p>Descripción detallada de la pelicula</p>
+                </div>
+                <div class="datosClasificacion">
+                    <h3>Datos</h3> 
+                    <ul>
+                        <li>
+                            Duracion: 1hr 54min
+                        </li>
+                        <li>
+                            fecha estreno: 25/12/2099
+                        </li>
+                        <li>
+                            Clasificacion: Toda la familia
+                        </li>
+                        <li>
+                            Genero: Drama
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <dl class="datosElenco">
+                <h3>Elenco</h3>
+                <dt>
+                    <figure>
+                        <img src="https://images.ecestaticos.com/JfPtItuDpd5g4aTARGeT9fyW_Gk=/155x2:2168x1512/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd65%2Fabd%2F922%2Fd65abd922fe309a97d9882e1a852aef2.jpg" alt="Actor">
+                        <figcaption>
+                            <h4>Will Smith</h4>
+                            <p>Actor</p> 
+                        </figcaption>
+                    </figure>
+                </dt>
+                <dt>
+                    <figure>
+                        <img src="https://images.ecestaticos.com/JfPtItuDpd5g4aTARGeT9fyW_Gk=/155x2:2168x1512/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd65%2Fabd%2F922%2Fd65abd922fe309a97d9882e1a852aef2.jpg" alt="Actor">
+                        <figcaption>
+                            <h4>Will Smith</h4>
+                            <p>Actor</p>
+                        </figcaption>
+                    </figure>
+                </dt>
+                <dt>
+                    <figure>
+                        <img src="https://images.ecestaticos.com/JfPtItuDpd5g4aTARGeT9fyW_Gk=/155x2:2168x1512/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fd65%2Fabd%2F922%2Fd65abd922fe309a97d9882e1a852aef2.jpg" alt="Actor">
+                        <figcaption>
+                            <h4>Will Smith</h4>
+                            <p>Actor</p>
+                        </figcaption>
+                    </figure>
+                </dt>
+            </dl>                
+        </section>
+
+        <section class="peliculaTicket">
+            <div class="ticketFunciones">
+                <button class="ticketHorario">
+                    <p class="diaSemana">lunes</p>
+                    <p class="diaFecha">1</p>
+                    <p class="mes">agosto</p>
+                </button>
+                <button class="ticketHorario">
+                    <p class="diaSemana">lunes</p>
+                    <p class="diaFecha">1</p>
+                    <p class="mes">agosto</p>
+                </button>
+                <button class="ticketHorario">
+                    <p class="diaSemana">lunes</p>
+                    <p class="diaFecha">1</p>
+                    <p class="mes">agosto</p>
+                </button>
+
+                <label class="slider-control prev">&#8249;</label>
+                <label class="slider-control next">&#8250;</label>
+            </div>
+
+            <!---->
+            <div class="ticketCines">
+                <div class="cinesContenedor">
+                    <button class="fullTitulo" id="fullTitulo">
+                        <h4>Tolon</h4>
+                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 ease-in-out duration-150 rotate-90" stroke-width="1.67">
+                            <mask id="mask0_1129_2673" maskUnits="userSpaceOnUse" x="7" y="5" width="12" height="20"
+                                style="mask-type: alpha;">
+                                <path
+                                    d="M7.50009 13.2292L10.7334 9.99583L7.50009 6.7625C7.34404 6.60681 7.25635 6.39543 7.25635 6.175C7.25635 5.95457 7.34404 5.74319 7.50009 5.5875C7.82509 5.2625 8.35009 5.2625 8.67509 5.5875L12.5001 9.4125C12.8251 9.7375 12.8251 10.2625 12.5001 10.5875L8.67509 14.4125C8.35009 14.7375 7.82509 14.7375 7.50009 14.4125C7.18342 14.0875 7.17509 13.5542 7.50009 13.2292Z"
+                                    fill="black"></path>
+                            </mask>
+                            <g mask="url(#mask0_1129_2673)">
+                                <rect width="30" height="30" fill="currentColor"></rect>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="contenedorDeColumnas">
+                        <div class="contenedorColumnaDescripcion">
+                            <img src="https://www.cinex.com.ve/assets/images/cinemas/xtln.jpg.pagespeed.ic.KmV8PiXYqp.webp" alt="cine Tolon">
+                            <p>Calle Copernico con Nueva York, Las Mercedes, Centro Comercial Tolon, Pisos 5, 6. Caracas</p>
+                        </div>
+    
+                        <div class="contenedorColumnaSalas">
+                            <button class="salasItem">
+                                <div class="itemContenido">
+                                    <div class="contenidoCategorias">
+                                        <!--aqui se cargan todos los iconos de categoria de esta sala-->
+                                        <img class="categoriaIcono" src="https://www.cinex.com.ve/assets/images/xes.png.pagespeed.ic.E1u2JNh03u.webp">
+                                        <img class="categoriaIcono" src="https://www.cinex.com.ve/assets/images/xes.png.pagespeed.ic.E1u2JNh03u.webp">
+                                    </div>
+                                    <h5 class="hora">01:00 pm</h5>
+                                    <p class="sala" >sala 1</p>
+                                </div>
+                            </button>
+                            <button class="salasItem">
+                                <div class="itemContenido">
+                                    <div class="contenidoCategorias">
+                                        <!--aqui se cargan todos los iconos de categoria de esta sala-->
+                                        <img class="categoriaIcono" src="https://www.cinex.com.ve/assets/images/xes.png.pagespeed.ic.E1u2JNh03u.webp">
+                                    </div>
+                                    <h5 class="hora">01:00 pm</h5>
+                                    <p class="sala" >sala 1</p>
+                                </div>
+                            </button>
+                            <button class="salasItem">
+                                <div class="itemContenido">
+                                    <div class="contenidoCategorias">
+                                        <!--aqui se cargan todos los iconos de categoria de esta sala-->
+                                        <img class="categoriaIcono" src="https://www.cinex.com.ve/assets/images/xes.png.pagespeed.ic.E1u2JNh03u.webp">
+                                    </div>
+                                    <h5 class="hora">01:00 pm</h5>
+                                    <p class="sala" >sala 1</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div> 
+                </div>   
+
+                <div class="cinesContenedor">
+                    <button class="fullTitulo" id="fullTitulo">
+                        <h4>Tolon</h4>
+                        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="h-8 w-8 ease-in-out duration-150 rotate-90" stroke-width="1.67">
+                            <mask id="mask0_1129_2673" maskUnits="userSpaceOnUse" x="7" y="5" width="12" height="20"
+                                style="mask-type: alpha;">
+                                <path
+                                    d="M7.50009 13.2292L10.7334 9.99583L7.50009 6.7625C7.34404 6.60681 7.25635 6.39543 7.25635 6.175C7.25635 5.95457 7.34404 5.74319 7.50009 5.5875C7.82509 5.2625 8.35009 5.2625 8.67509 5.5875L12.5001 9.4125C12.8251 9.7375 12.8251 10.2625 12.5001 10.5875L8.67509 14.4125C8.35009 14.7375 7.82509 14.7375 7.50009 14.4125C7.18342 14.0875 7.17509 13.5542 7.50009 13.2292Z"
+                                    fill="black"></path>
+                            </mask>
+                            <g mask="url(#mask0_1129_2673)">
+                                <rect width="30" height="30" fill="currentColor"></rect>
+                            </g>
+                        </svg>
+                    </button>
+                    <div class="contenedorDeColumnas">
+                        <div class="contenedorColumnaDescripcion">
+                            <img src="https://www.cinex.com.ve/assets/images/cinemas/xtln.jpg.pagespeed.ic.KmV8PiXYqp.webp" alt="cine Tolon">
+                            <p>Calle Copernico con Nueva York, Las Mercedes, Centro Comercial Tolon, Pisos 5, 6. Caracas</p>
+                        </div>
+    
+                        <div class="contenedorColumnaSalas">
+                            <button class="salasItem">
+                                <div class="itemContenido">
+                                    <div class="contenidoCategorias">
+                                        <!--aqui se cargan todos los iconos de categoria de esta sala-->
+                                        <img class="categoriaIcono" src="https://www.cinex.com.ve/assets/images/xes.png.pagespeed.ic.E1u2JNh03u.webp">
+                                    </div>
+                                    <h5 class="hora">01:00 pm</h5>
+                                    <p class="sala" >sala 1</p>
+                                </div>
+                            </button>
+                            <button class="salasItem">
+                                <div class="itemContenido">
+                                    <div class="contenidoCategorias">
+                                        <!--aqui se cargan todos los iconos de categoria de esta sala-->
+                                        <img class="categoriaIcono" src="https://www.cinex.com.ve/assets/images/xes.png.pagespeed.ic.E1u2JNh03u.webp">
+                                    </div>
+                                    <h5 class="hora">01:00 pm</h5>
+                                    <p class="sala" >sala 1</p>
+                                </div>
+                            </button>
+                            <button class="salasItem">
+                                <div class="itemContenido">
+                                    <div class="contenidoCategorias">
+                                        <!--aqui se cargan todos los iconos de categoria de esta sala-->
+                                        <img class="categoriaIcono" src="https://www.cinex.com.ve/assets/images/xes.png.pagespeed.ic.E1u2JNh03u.webp">
+                                    </div>
+                                    <h5 class="hora">01:00 pm</h5>
+                                    <p class="sala" >sala 1</p>
+                                </div>
+                            </button>
+                        </div>
+                    </div> 
+                </div>
+                <!--mas-->
+            </div>
+        </section>
     </main>
 <!----------------------------------------------------------------------->
 <footer class="footer">
-    <a class="logo-de-cinex">
-        <img src="ruta.png" alt="Logo de Cinex" width="150">
-    </a>
-    <ul class="social-icon">
-        <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a>
-        </li>
-        <li class="social-icon__item">
-            <a class="social-icon__link" href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-        </li>
-    </ul>
+    <div class="footerPrincipal">
 
-    <div class="paginasFooter">
-        <ul class="listaPaginas">
-            <li><a href="Cartelera.html">Cartelera</a></li>
-            <li><a href="Cines.html">Cines</a></li>
-            <li><a href="Estrenos.html">Próximos estrenos</a></li>
+        <ul class="footerRedes">
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
+                </a>
+            </li>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
+                </a>
+            </li>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
+                </a>
+            </li>
+            <li class="iconoRedSocial">
+                <a class="imagenRedSocial" href="#">
+                    <img src="imagenes/facebook.png">
+                </a>
+            </li>
         </ul>
     </div>
-    <div class="infoFooter">
-        <div class="widget widget-links">
-            <h4 class="widget-title">Nosotros</h4>
-            <p class="info">informacion empresa</p>
+
+    <ul class="footerEnlaces">
+        <li><a href="Cartelera.html">Nosotros</a></li>
+        <li><a href="Cines.html">Empresa</a></li>
+        <li><a href="Estrenos.html">Contactos</a></li>
+    </ul>
+    
+    <div class="footerAbout">
+        
+        <div class="aboutInfo">
+            <a class="footerLogo">
+                <img src="imagenes/Cinex_logo.png" alt="LogoDeCinex" width="150">
+            </a>
+            <p>&copy;compania | All Rights Reserved</p>
         </div>
     </div>
-
-    <p>&copy;compania | All Rights Reserved</p>
 </footer>
-
-<!--<h1>Cine </h1>
-<img scr=".png"> </img>
-<a href="">Link</a> -->
-<!-- <script src="FuncionMain.js"></script> -->
+<script src="Javascript/ScriptPeliHorarios.js"></script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+body {
+    font-size: 16px;
+    margin: auto;
+    font-family:  system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.main {
+    display: grid;
+    background-color: #092038; 
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1.4fr 0.3fr 1.3fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+}
+
+.ingresa,
+.principalPaginas {
+    text-align: center; 
+    margin: 80px;
+}
+
+.inputLogin {
+    width: 20%; 
+    padding: 10px;
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+    box-sizing: border-box; 
+    margin-bottom: 20px; 
+}
+
+.labelLogin{
+    font: sans-serif;
+    padding: 10px 20px;
+}
+
+.grupoForm3 button,
+.grupoForm3 a {
+    font-size: 16px;
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    margin-right: 10px; 
+    
+}
+

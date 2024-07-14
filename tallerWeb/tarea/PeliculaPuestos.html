@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        .encabezado {
+            display: grid;
+            grid-auto-rows: 1fr;
+            grid-template-columns: 215px 1.3fr 0.5fr;
+            grid-template-rows: 80px;
+            gap: 0px 2px;
+            grid-template-areas: "logoCinex barraNavegacion signLogin";
+            background-color: black;
+            width: 100%;
+            ;
+        }
+
+        .barraNavegacion {
+            margin-left: 30px;
+            margin-right: 50px;
+            grid-area: barraNavegacion;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        .barraNavegacion li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            width: 100%;
+            height: 100%;
+            padding: 16px 16px;
+        }
+
+
+        .barraNavegacion li a:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .logoCinex {
+            grid-area: logoCinex;
+            display: flex;
+            justify-content: center;
+        }
+
+        .signLogin {
+            grid-area: signLogin;
+        }
+
+
+        .login-btn {
+            display: flex;
+            justify-content: right;
+            background-color: transparent;
+            color: #4285F4;
+            border: 2px solid #4285F4;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+            margin: 10px;
+            margin-left: 80px;
+        }
+
+        .login-btn:hover {
+            background-color: #4285F4;
+            color: white;
+        }
+
+        .login-icon {
+            margin-right: 5px;
+        }
+
+        /************************************************************/
+        /*footer*/
+
+        .footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /*grid-template-columns: auto 1fr;*/
+            grid-template-rows: auto;
+            gap: 30px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "footerPrincipal footerPrincipal footerPrincipal"
+                "footerEnlaces footerEnlaces footerEnlaces"
+                "footerAbout footerAbout footerAbout";
+            padding-top: 20px;
+            background-color: black;
+            width: 100%;
+        }
+
+        .footerPrincipal {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            /*grid-template-rows: 1fr 1.1fr 0.9fr;*/
+            grid-template-rows: 70px 5px auto;
+            gap: 0px 0px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "footerRedes footerRedes footerRedes";
+            grid-area: footerPrincipal;
+        }
+
+        .footerLogo {
+            grid-area: footerLogo;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footerRedes {
+            grid-area: footerRedes;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .imagenRedSocial img {
+            width: 50px;
+            height: auto;
+        }
+
+        .footerEnlaces {
+            grid-area: footerEnlaces;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 200px;
+        }
+
+        .footerEnlaces a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footerAbout {
+            grid-area: footerAbout;
+            display: flex;
+            justify-content: center;
+        }
+
+        .footerAbout p {
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+
+        /*seccion contenedor de todo*/
+        .contenedorAbsoluto {
+            margin: 40px 50px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: space-between;
+            /*align-content: stretch;*/
+        }
+
+        .tablaSeleccionarAsiento {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            margin-bottom: 30px;
+            /*max-width: 60%;*/
+        }
+
+        /*la otra seccion--------------------------------------------------------------*/
+
+        .peliculaTitulo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /*max-width: 30%;*/
+            width: 100%;
+            /*display: none;*/
+        }
+
+        .peliculaImagen {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            border-radius: 5px;
+            object-fit: cover;
+        }
+
+        .detallesPelicula {
+            text-align: center;
+            width: 100%;
+        }
+
+        .detallesPelicula h4 {
+            color: #333;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        /*nop*/
+        .peliculaSubcontenedor {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: solid gray;
+            border-width: 1px;
+            margin: 3px 0;
+        }
+
+        .peliculaSubcontenedor p {
+            color: #666;
+            font-size: 1em;
+            margin: 0;
+        }
+
+
+
+        /*seccion leyenda para la tbla*/
+
+        .regionTablaInfo {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .infoTitulo {
+            margin-left: 10px;
+        }
+
+        .infoTitulo h1 {
+            color: #333333;
+            font-size: 24px;
+        }
+
+        .infoLeyenda {
+            display: flex;
+            justify-content: center;
+        }
+
+        .botonLeyenda {
+            border-radius: 20px;
+            padding: 10px 20px;
+            width: 50%;
+            margin: 0 10px;
+            text-align: center;
+        }
+
+        .botonLeyenda h3 {
+            margin: 0;
+        }
+
+        /* Disponible */
+        .infoLeyenda .botonLeyenda:nth-child(1) {
+            background-color: greenyellow;
+            /* Verde claro */
+        }
+
+        /* Ocupado */
+        .infoLeyenda .botonLeyenda:nth-child(2) {
+            background-color: red;
+            /* Rojo claro */
+        }
+
+        /* Seleccionado */
+        .infoLeyenda .botonLeyenda:nth-child(4) {
+            background-color: purple;
+            /* Púrpura claro */
+        }
+
+        /* reservado */
+        .infoLeyenda .botonLeyenda:nth-child(3) {
+            background-color: orange;
+        }
+
+        /*tabla--------------------------------------------------------------*/
+
+        .regionTablaAsientos {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            width: 100%;
+            margin: 30px 0;
+            overflow-x: auto;
+        }
+
+        .regionTablaAsientos table {
+            max-width: 100%;
+            border-collapse: collapse;
+            /*max-width: fit-content;
+    width: fit-content*/
+            ;
+            /*object-fit:contain;*/
+        }
+
+        .regionTablaAsientos caption {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .regionTablaAsientos th,
+        .regionTablaAsientos td {
+            padding: 10px;
+            width: 42px;
+            /* Ajusta el ancho según tus necesidades */
+            min-width: 42px;
+        }
+
+        .regionTablaAsientos th {
+            background-color: #f2f2f2;
+        }
+
+        .regionTablaAsientos {
+            background-color: transparent;
+        }
+
+        .regionTablaAsientos .puesto {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .regionTablaAsientos .iconoSilla {
+            width: 24px;
+            height: auto;
+            margin: 2px;
+            /* Ajusta el margen según tus necesidades */
+        }
+
+        .regionTablaAsientos .disponible .iconoSilla path {
+            fill: greenyellow;
+        }
+
+        .regionTablaAsientos .reservado .iconoSilla path {
+            fill: orange;
+        }
+
+        .regionTablaAsientos .seleccionado .iconoSilla path {
+            fill: purple;
+        }
+
+        .regionTablaAsientos .ocupado .iconoSilla path {
+            fill: red;
+        }
+
+        .regionTablaAsientos p {
+            margin: 0;
+        }
+
+        /*tabla pantalla--------------------------------------------------------------*/
+
+        .regionTablaPantalla {
+            position: relative;
+            text-align: center;
+            margin: 60px 0;
+        }
+
+        .regionTablaPantalla svg {
+            width: 100%;
+            height: auto;
+            fill: none;
+            stroke: currentColor;
+            stroke-width: 5;
+            border-radius: 15px;
+        }
+
+        .regionTablaPantalla p {
+            position: absolute;
+            bottom: -20px;
+            /* Ajusta según sea necesario */
+            left: 50%;
+            transform: translateX(-50%);
+            color: #808080;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        /*confirmar silla--------------------------------------------------------------*/
+
+        .regionTablaComprar {
+            background-color: #f5f5f9;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 100%;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .infoBoton button {
+            align-content: center;
+            background-color: #5e4b8b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .infoBoton button:hover {
+            background-color: #4a3a6f;
+        }
+
+        .infoBoton button p {
+            margin: 0;
+        }
+    </style>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pelicula puestos</title>
+</head>
+
+<body>
+    <!--inicio, estrenos, promociones, cines, ingresar-->
+    <header class="encabezado">
+        <a class="logoCinex" href="Principal.html">
+            <img src="https://cinexunidos-production.up.railway.app/assets/images/cinex-unidos.png" alt="Logo de Cinex">
+        </a>
+
+        <nav>
+            <ul class="barraNavegacion" id="menu principal">
+                <li><a href="Principal.html">Inicio</a></li>
+                <li><a href="Estrenos.html">Estrenos</a></li>
+                <li><a href="Cartelera.html">Cartelera</a></li>
+                <li><a href="Cines.html">Cines</a></li>
+            </ul>
+        </nav>
+
+
+        <a href="SignUp.html" class="login-btn">
+            <span class="login-icon">👤</span>
+            Iniciar Sesión / Registrarse
+        </a>
+
+    </header>
+    <!----------------------------------------------------------------------->
+    <main>
+        <section class="contenedorAbsoluto">
+            <section class="tablaSeleccionarAsiento">
+
+                <div class="regionTablaInfo">
+                    <div class="infoTitulo">
+                        <h1>Selecciona tus asientos</h1>
+                    </div>
+                    <div class="infoLeyenda">
+                        <div class="botonLeyenda">
+                            <h3>Disponible</h3>
+                        </div>
+                        <div class="botonLeyenda">
+                            <h3>Ocupado</h3>
+                        </div>
+                        <div class="botonLeyenda">
+                            <h3>Reservado</h3>
+                        </div>
+                        <div class="botonLeyenda">
+                            <h3>Seleccionado</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="regionTablaAsientos">
+                    <table>
+                        <caption>Asientos de Cine</caption>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>1</th>
+                                <th>2</th>
+                                <th>3</th>
+                                <th>4</th>
+                                <th>5</th>
+                                <th>6</th>
+                                <th>7</th>
+                                <th>8</th>
+                                <th>9</th>
+                                <th>10</th>
+                                <th>11</th>
+                                <th>12</th>
+                                <th>13</th>
+                                <th>14</th>
+                                <th>15</th>
+                                <th>16</th>
+                                <th>17</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <!---->
+                <div class="regionTablaPantalla">
+                    <svg class="w-full h-auto text-neutral-500 rounded-full" viewBox="0 0 577 31" fill="none"
+                        xmlns="http://www.w3.org/2000/svg" stroke-width="5">
+                        <path
+                            d="M575.6 3.00005C537.845 10.926 493.023 17.2132 443.694 21.5027C394.365 25.7922 341.494 28 288.1 28C234.706 28 181.835 25.7922 132.506 21.5027C83.1768 17.2132 38.3551 10.926 0.600098 3"
+                            stroke="currentColor"></path>
+                    </svg>
+                    <p class="text-gray text-xs uppercase">Pantalla</p>
+                </div>
+
+                <!---->
+                <div class="regionTablaComprar">
+                    <div class="infoBoton">
+                        <button id="botonContinuar">
+                            <p>continuar</p>
+                        </button>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="peliculaTitulo">
+                <img class="peliculaImagen"
+                    src="https://cms-assets.webediamovies.pro/cdn-cgi/image/dpr=1,fit=scale-down,gravity=auto,metadata=none,quality=85,width=2000/production/241/b3f2b18c15ffb4f141116cd089c407eb.jpg"
+                    alt="Portada de la película">
+                <div class="detallesPelicula">
+                    <h4>Titulo</h4>
+                    <div class="peliculaSubcontenedor">
+                        <p>Fecha</p>
+                        <p>31/12/1</p>
+                    </div>
+                    <div class="peliculaSubcontenedor" id="startTime">
+                        <p>Hora</p>
+                    </div>
+                    <div class="peliculaSubcontenedor" id="runningTime">
+                        <p>Duracion</p>
+                    </div>
+                    <div class="peliculaSubcontenedor" id="rating">
+                        <p>Clasificacion</p>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </main>
+    <!----------------------------------------------------------------------->
+    <footer class="footer">
+        <div class="footerPrincipal">
+
+            <ul class="footerRedes">
+                <li class="iconoRedSocial">
+                    <a class="imagenRedSocial" href="#">
+                        <img src="">
+                    </a>
+                </li>
+                <li class="iconoRedSocial">
+                    <a class="imagenRedSocial" href="#">
+                        <img src="">
+                    </a>
+                </li>
+                <li class="iconoRedSocial">
+                    <a class="imagenRedSocial" href="#">
+                        <img src="">
+                    </a>
+                </li>
+                <li class="iconoRedSocial">
+                    <a class="imagenRedSocial" href="#">
+                        <img src="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="footerEnlaces">
+            <li><a href="Cartelera.html">Nosotros</a></li>
+            <li><a href="Cines.html">Empresa</a></li>
+            <li><a href="Estrenos.html">Contactos</a></li>
+        </ul>
+
+        <div class="footerAbout">
+
+            <div class="aboutInfo">
+                <a class="footerLogo">
+                    <img src="imagenes/Cinex_logo.png" alt="LogoDeCinex" width="150">
+                </a>
+                <p>&copy;compania | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const urlApi = "https://cinexunidos-production.up.railway.app";
+        let theatreId = "", auditoriumId = "", showtimeId = "";
+
+        //funciones api--------------------------------------------------------------------------
+
+        //mostrar error
+        function mostrarNotificacionError(mensaje) {
+            // Crea una notificación con el mensaje de error
+            if ('Notification' in window && Notification.permission === 'granted') {
+                new Notification('Error', {
+                    body: mensaje,
+                    icon: 'ruta/a/tu/icono-de-error.png', // Cambia esto por la ruta a tu propio icono de error
+                });
+            }
+        }
+
+        /*function mostrarNotificacionError(mensaje) {
+            alert(mensaje); // Puedes reemplazar esto con tu propio método de notificación
+        }*/
+
+        async function obtenerInformacionCines() {
+            try {
+                const respuesta = await fetch(urlApi + "/theathers/");
+                if (!respuesta.ok) {
+                    throw new Error(`Error HTTP: ${respuesta.status}`);
+                }
+                const datos = await respuesta.json();
+                console.log(datos);
+                // Aquí puedes procesar los datos como necesites
+            } catch (error) {
+                console.error('Hubo un problema al recuperar la información de los cines:', error);
+            }
+        }
+
+        async function obtenerInformacionCineEspecifico(theatreId) {
+            try {
+                const respuesta = await fetch(urlApi + `/theatres/${theatreId}`);
+                if (!respuesta.ok) {
+                    if (respuesta.status === 404) {
+                        throw new Error(`El cine con ID '${theatreId}' no fue encontrado.`);
+                    } else {
+                        throw new Error(`Error HTTP: ${respuesta.status}`);
+                    }
+                }
+                const datos = await respuesta.json();
+                console.log(datos);
+                // Aquí puedes procesar los datos como necesites
+            } catch (error) {
+                console.error('Hubo un problema al recuperar la información del cine:', error);
+                mostrarNotificacionError(error.message);
+                return;
+            }
+        }
+
+        async function obtenerInformacionSalasCine(theatreId) {
+            try {
+                const respuesta = await fetch(`${urlApi}/theatres/${theatreId}/auditoriums`);
+                if (!respuesta.ok) {
+                    if (respuesta.status === 404) {
+                        throw new Error(`El cine con ID '${theatreId}' no fue encontrado.`);
+                    } else if (respuesta.status === 400) {
+                        throw new Error('El identificador del cine proporcionado no es válido.');
+                    } else {
+                        throw new Error(`Error HTTP: ${respuesta.status}`);
+                    }
+                }
+                const salas = await respuesta.json();
+                console.log(salas);
+                // Aquí puedes procesar la información de las salas como necesites
+            } catch (error) {
+                console.error('Hubo un problema al recuperar la información de las salas:', error);
+                mostrarNotificacionError(error.message);
+                return;
+            }
+        }
+
+        //para horarios
+        async function obtenerInformacionSalaCine() {
+            try {
+                const respuesta = await fetch(`${urlApi}/theatres/${theatreId}/auditoriums/${auditoriumId}`);
+                if (!respuesta.ok) {
+                    if (respuesta.status === 404) {
+                        throw new Error(`La sala de cine con ID '${auditoriumId}' no fue encontrada.`);
+                    } else if (respuesta.status === 400) {
+                        throw new Error('El identificador proporcionado no es válido.');
+                    } else {
+                        throw new Error(`Error HTTP: ${respuesta.status}`);
+                    }
+                }
+                const salaCine = await respuesta.json();
+                console.log(salaCine);
+                // Aquí puedes procesar la información de la sala de cine como necesites
+            } catch (error) {
+                console.error('Hubo un problema al recuperar la información de la sala de cine:', error);
+                mostrarNotificacionError(error.message);
+                return;
+            }
+        }
+
+
+        /**/
+        async function obtenerInformacionFunciones() {
+            try {
+                const respuesta = await fetch(`${urlApi}/theatres/${theatreId}/auditoriums/${auditoriumId}/showtimes`);
+                if (!respuesta.ok) {
+                    if (respuesta.status === 404) {
+                        throw new Error(`No se encontró ninguna función. Asegúrate de que los identificadores del cine y la sala de cine sean correctos.`);
+                    } else {
+                        throw new Error(`Error HTTP: ${respuesta.status}`);
+                    }
+                }
+                const funciones = await respuesta.json();
+                console.log(funciones);
+                // Aquí puedes procesar la información de las funciones como necesites
+            } catch (error) {
+                console.error('Hubo un problema al recuperar la información de las funciones:', error);
+                mostrarNotificacionError(error.message);
+                return;
+            }
+        }
+
+        //
+        async function obtenerInformacionFuncionEspecifica() {
+            try {
+                const respuesta = await fetch(`${urlApi}/theatres/${theatreId}/auditoriums/${auditoriumId}/showtimes/${showtimeId}`);
+                if (!respuesta.ok) {
+                    if (respuesta.status === 404) {
+                        throw new Error(`La función con ID '${showtimeId}' no fue encontrada. Verifica los identificadores proporcionados.`);
+                    } else {
+                        throw new Error(`Error HTTP: ${respuesta.status}`);
+                    }
+                }
+                const funcionEspecifica = await respuesta.json();
+                console.log(funcionEspecifica);
+                return funcionEspecifica;
+                // Aquí puedes procesar la información de la función específica como necesites
+            } catch (error) {
+                console.error('Hubo un problema al recuperar la información de la función específica:', error);
+                mostrarNotificacionError(error.message);
+                return;
+            }
+        }
+
+
+        async function reservarAsiento(seat) {
+            const url = `${urlApi}/theatres/${theatreId}/auditoriums/${auditoriumId}/showtimes/${showtimeId}/reserve`;
+            const requestBody = {
+                seat: seat
+            };
+
+            try {
+                const respuesta = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(requestBody)
+                });
+
+                if (respuesta.status === 200 || respuesta.status === 201) {
+                    console.log('El asiento ha sido reservado exitosamente.');
+                    // Aquí puedes agregar lógica adicional para manejar la reserva exitosa
+                } else if (respuesta.status === 403) {
+                    throw new Error('No se pudo realizar la reserva. El asiento ya está ocupado o no existe.');
+                } else if (respuesta.status === 400) {
+                    throw new Error('El asiento o butaca a reservar no ha sido proporcionado.');
+                } else {
+                    throw new Error(`Error HTTP: ${respuesta.status}`);
+                }
+            } catch (error) {
+                console.error('Hubo un problema al realizar la reserva:', error);
+                mostrarNotificacionError(error.message);
+            }
+        }
+
+
+        async function cancelarReservaAsiento(seat) {
+            const url = `${urlApi}/theatres/${theatreId}/auditoriums/${auditoriumId}/showtimes/${showtimeId}/reserve`;
+            try {
+                const respuesta = await fetch(url, {
+                    method: 'DELETE',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ seat: seat })
+                });
+
+                if (respuesta.status === 200) {
+                    console.log('La reserva del asiento ha sido cancelada exitosamente.');
+                    // Aquí puedes agregar lógica adicional para manejar la cancelación exitosa
+                } else if (respuesta.status === 400) {
+                    throw new Error('La información del asiento a cancelar no ha sido proporcionada.');
+                } else if (respuesta.status === 409) {
+                    throw new Error('El asiento a cancelar no se encuentra ocupado o no es posible cancelarlo.');
+                } else {
+                    throw new Error(`Error HTTP: ${respuesta.status}`);
+                }
+            } catch (error) {
+                console.error('Hubo un problema al cancelar la reserva del asiento:', error);
+                mostrarNotificacionError(error.message);
+            }
+        }
+
+
+        function recibirActualizacionesReservas() {
+            const url = `/theatres/${theatreId}/auditoriums/${auditoriumId}/showtimes/${showtimeId}/reservation-updates`;
+
+            const eventSource = new EventSource(url);
+
+            eventSource.onmessage = function (event) {
+                const data = JSON.parse(event.data);
+                console.log('Actualización recibida:', data);
+                // Aquí puedes manejar la notificación según tus necesidades
+            };
+
+            eventSource.onerror = function (error) {
+                console.error('Error al recibir actualizaciones:', error);
+            };
+        }
+
+
+        //funciones----------------------------------------------------------------------------
+
+
+        //obtenerInformacionFuncionEspecifica("sambil-chacao", "sala-1", "14_00");
+
+        theatreId = "sambil-chacao";
+        auditoriumId = "sala-1";
+        showtimeId = "17_45";
+
+        let asientosSeleccionados = [];
+
+        obtenerInformacionFuncionEspecifica().then(datosFuncion => {
+            const asientos = datosFuncion.seats;
+            const datosPelicula = datosFuncion.movie;
+            cargarTablaAsientos(asientos);
+            actualizarDetallesPelicula(datosPelicula, datosFuncion.startTime);
+            //recibirActualizacionesReservas();
+            otroEvento();
+        });
+
+
+        function cargarTablaAsientos(asientos) {
+            const tablaAsientos = document.querySelector('.regionTablaAsientos table tbody');
+            tablaAsientos.innerHTML = '';
+
+            const letrasFilas = Object.keys(asientos).reverse();
+
+            letrasFilas.forEach((letraFila) => {
+                const asientosFila = asientos[letraFila];
+                const filaElement = document.createElement('tr');
+                filaElement.innerHTML = `<th>${letraFila}</th>`;
+
+                asientosFila.forEach((estadoAsiento, indexAsiento) => {
+                    if (estadoAsiento === -1) {
+                        filaElement.innerHTML += '<td></td>';
+                    } else {
+                        const asientoElement = document.createElement('td');
+                        let claseAsiento = '';
+
+                        switch (estadoAsiento) {
+                            case 0:
+                                claseAsiento = 'disponible';
+                                break;
+                            case 1:
+                                claseAsiento = 'ocupado';
+                                break;
+                            case 2:
+                                claseAsiento = 'reservado';
+                                break;
+                        }
+                        const numeroAsiento = letraFila + (indexAsiento + 1);
+                        let asiento = letraFila + indexAsiento;
+
+                        asientoElement.innerHTML = `
+                    <button class="puesto ${claseAsiento}" id="${asiento}">
+                        <p>${numeroAsiento}</p>
+                        <svg class="iconoSilla"
+                            viewBox="0 0 28 22" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M1.09961 2.5H3.59951C4.1518 2.5 4.59951 2.94772 4.59951 3.5V15.5C4.59951 16.0523 5.04723 16.5 5.59951 16.5H22.0995C22.6518 16.5 23.0995 16.0523 23.0995 15.5V3.5C23.0995 2.94772 23.5472 2.5 24.0995 2.5H26.5996C27.1519 2.5 27.5996 2.94771 27.5996 3.5V16.5C27.5996 19.2614 25.361 21.5 22.5996 21.5H5.09961C2.33819 21.5 0.0996094 19.2614 0.0996094 16.5V3.5C0.0996094 2.94772 0.547325 2.5 1.09961 2.5Z"
+                                fill="currentColor">
+                            </path>
+                            <path
+                                d="M5.59951 13V2C5.59951 0.895431 6.49495 0 7.59951 0H20.0996C21.2042 0 22.0996 0.89543 22.0996 2V7.5V13C22.0996 14.1046 21.2042 15 20.0996 15H7.59951C6.49494 15 5.59951 14.1046 5.59951 13Z"
+                                fill="currentColor">
+                            </path>
+                        </svg>
+                    </button>
+                `;
+                        filaElement.appendChild(asientoElement);
+                    }
+                });
+                tablaAsientos.appendChild(filaElement);
+            });
+            asignarEventoAsientosDisponibles();
+        }
+
+
+        function asignarEventoAsientosDisponibles() {
+            const botonesAsiento = document.querySelectorAll('.puesto.disponible, .puesto.seleccionado');
+            const infoItems = document.getElementById('InfoItems');
+
+            botonesAsiento.forEach((boton) => {
+                boton.addEventListener('click', async (event) => {
+                    let asientoSeleccionado = event.currentTarget.id;
+                    console.log(`Asiento seleccionado: ${asientoSeleccionado}`);
+
+                    if (boton.classList.contains('seleccionado')) {
+                        // Cambia la clase de "seleccionado" a "disponible"
+                        boton.classList.remove('seleccionado');
+                        boton.classList.add('disponible');
+
+                        try {
+                            await cancelarReservaAsiento(asientoSeleccionado);
+                            console.log('Asiento reservado exitosamente.');
+                        } catch (error) {
+                            console.error('Error al reservar el asiento:', error.message);
+                            alert(error.message);
+                        }
+
+                    } else {
+                        // Cambia la clase de "disponible" a "seleccionado"
+                        boton.classList.remove('disponible');
+                        boton.classList.add('seleccionado');
+
+                        // Llama a la función para reservar el asiento
+                        try {
+                            await reservarAsiento(asientoSeleccionado);
+                            console.log('Asiento reservado exitosamente.');
+                        } catch (error) {
+                            console.error('Error al reservar el asiento:', error.message);
+                            alert(error.message);
+                        }
+                    }
+                });
+            });
+        }
+
+        function otroEvento() {
+            //document.addEventListener('DOMContentLoaded', function () {
+            const boton = document.getElementById('botonContinuar');
+            boton.addEventListener('click', function () {
+                obtenerInformacionFuncionEspecifica().then(datosFuncion => {
+                    const asientos = datosFuncion.seats;
+                    cargarTablaAsientos(asientos);
+                    alert("se ha reservado los asientos");
+                });
+            });
+            //});
+        }
+
+
+        ///////////////////////////////////////////////////
+
+        function actualizarDetallesPelicula(datosPelicula, hora) {
+            document.querySelector('.peliculaImagen').src = urlApi + '/' + datosPelicula.poster;
+            document.querySelector('.detallesPelicula h4').textContent = datosPelicula.name;
+
+            agregarParrafo('runningTime', datosPelicula.runningTime);
+            agregarParrafo('rating', datosPelicula.rating);
+            agregarParrafo('startTime', hora);
+        }
+
+        function agregarParrafo(contenedorId, texto) {
+            const contenedor = document.querySelector(`#${contenedorId}`);
+            const nuevoParrafo = document.createElement('p');
+            nuevoParrafo.textContent = texto;
+            contenedor.appendChild(nuevoParrafo);
+        }
+
+    </script>
+</body>
+
+</html>
